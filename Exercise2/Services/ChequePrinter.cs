@@ -1,7 +1,7 @@
-using ChequeProtegido.Interfaces;
+using Exercise2.Interfaces;
 using System;
 
-namespace ChequeProtegido.Services
+namespace Exercise2.Services
 {
     public class ChequePrinter
     {
@@ -14,8 +14,8 @@ namespace ChequeProtegido.Services
 
         public void ImprimirMonto(double monto)
         {
-            string resultado = _formatter.Formatear(monto);
-            Console.WriteLine($"Monto protegido: {resultado}");
+            string protegido = _formatter.FormatearMonto(monto);
+            Console.WriteLine($"Monto protegido: {protegido}");
             Console.WriteLine("Posiciones     : 12345678");
         }
     }

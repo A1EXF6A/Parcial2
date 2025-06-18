@@ -16,8 +16,15 @@ namespace Exercise2
             IChequeFormatter formatter = new ProtectedChequeFormatter();
             ChequePrinter printer = new ChequePrinter(formatter);
 
-            double monto = 82.60; // Puedes cambiar este valor para probar
-            printer.ImprimirMonto(monto);
+            Console.Write("Ingrese el monto del cheque: ");
+            if (double.TryParse(Console.ReadLine(), out double monto))
+            {
+                printer.ImprimirMonto(monto);
+            }
+            else
+            {
+                Console.WriteLine("Monto inválido.");
+            }
         }
     }
 }

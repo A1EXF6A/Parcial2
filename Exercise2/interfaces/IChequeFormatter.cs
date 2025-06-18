@@ -1,7 +1,7 @@
-namespace ChequeProtegido.Interfaces
+namespace Exercise2.Interfaces
 {
     public interface IChequeFormatter
     {
-        string Formatear(double monto);
+        string FormatearMonto(double monto);
     }
 }
